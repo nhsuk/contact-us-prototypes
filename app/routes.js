@@ -18,16 +18,16 @@ router.post('/reasonforcontact-answer', function (req, res) {
   let reason = req.body.reasonforcontact;
 
   if (reason === 'healthcare-data-query') {
-    res.redirect('/level-2-healthcare')
+    res.redirect('/contact-us/level-2-healthcare')
   } 
   else if (reason == "feedback"){
-    res.redirect('/level-2-feedback')
+    res.redirect('/contact-us/level-2-feedback')
   }
   else if (reason == "feedback"){
-    res.redirect('/level-2-complaint')
+    res.redirect('/contact-us/level-2-complaint')
   }
   else if (reason == "feedback"){
-    res.redirect('/level-2-pims')
+    res.redirect('/contact-us/level-2-pims')
   }
   else {
     res.redirect('/')
