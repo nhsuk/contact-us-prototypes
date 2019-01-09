@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ hero({
+    "heading": project,
+    "text": "Rapidly create HTML prototypes."
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-full">
+
+      <div class="nhsuk-grid-row nhsuk-promo-group">
+        <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
+          {{ promo({
+            "href": "/docs/install",
+            "heading": "Install",
+            "description": "Download and installation instructions."
+          }) }}
+        </div>
+        <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
+          {{ promo({
+            "href": "/docs/tutorials",
+            "heading": "Tutorials and examples",
+            "description": "Tutorials, examples and templates."
+          }) }}
+        </div>
+        <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
+          {{ promo({
+            "href": "/docs/about",
+            "heading": "About",
+            "description": "Getting support and contributing."
+          }) }}
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="nhsuk-u-reading-width">
+
+        <p class="nhsuk-u-margin-bottom-0">Visit the <a href="https://beta.nhs.uk/service-manual/">NHS digital service manual</a> for guidance and examples.</p>
+
+      </div>
+
+    </div>
+
+  </div>
+{% endblock %}

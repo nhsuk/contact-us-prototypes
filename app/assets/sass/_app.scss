@@ -1,0 +1,122 @@
+@import 'check-your-answers';
+@import 'related-nav';
+
+// Overrides auto reload div background colour
+#hc_extension_bkgnd {
+  background-color: $color_nhsuk-grey-4 !important;
+}
+
+// Body background white
+.nhsuk-body-white {
+  background-color: $color_nhsuk-white;
+}
+
+// Body background grey
+.nhsuk-body-grey {
+  background-color: $color_nhsuk-grey-5;
+}
+
+// Button adjustment
+.nhsuk-button {
+  margin-top: 8px;
+
+  @include mq($from: desktop) {
+    padding: 12px 24px;
+  }
+}
+
+// Footer adjustments
+@include mq($from: desktop) {
+  .nhsuk-footer__list--three-columns{
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: nhsuk-spacing(4);
+    -moz-column-gap: nhsuk-spacing(4);
+    column-gap: nhsuk-spacing(4);
+  }
+}
+
+// Panel - confirmation
+
+.nhsuk-panel--confirmation {
+  background-color: shade($color_nhsuk-aqua-green, 19%);
+  color: $color_nhsuk-white;
+  margin-top: 0;
+
+  @include mq($from: desktop) {
+    padding-bottom: nhsuk-spacing(8);
+    padding-top: nhsuk-spacing(8);
+  }
+}
+
+
+.nhsuk-panel__title {
+  @include nhsuk-responsive-margin(4, "bottom");
+
+  text-align: center;
+}
+
+.nhsuk-panel__body {
+  @include nhsuk-font(24);
+
+  text-align: center;
+
+  strong {
+    @include nhsuk-font(32, bold);
+  }
+}
+
+// Code styling
+
+pre {
+  @include nhsuk-responsive-margin(4, "bottom");
+
+  background: $color_nhsuk-white;
+  border: 1px solid $nhsuk-border-color;
+  overflow: hidden;
+  margin-top: 0;
+  padding: nhsuk-spacing(3);
+  position: relative;
+}
+
+li code,
+p code {
+  background: $color_nhsuk-white;
+  border: 1px solid $nhsuk-border-color;
+  padding: 0 nhsuk-spacing(3);
+}
+
+.nhsuk-expander pre,
+.nhsuk-expander p code,
+.nhsuk-expander li code {
+  background: $color_nhsuk-grey-5;
+  border: 1px solid $color_nhsuk-grey-4;
+}
+
+// Installation guide images
+
+.nhspk-img-guide {
+  @include nhsuk-responsive-margin(4, "bottom");
+  @include nhsuk-responsive-margin(2, "top");
+
+  width: 100%;
+}
+
+// Contextual adjustments for headings
+
+.nhspk-img-guide  + %nhsuk-heading-l,
+pre  + %nhsuk-heading-l {
+  @include nhsuk-responsive-padding(4, 'top');
+}
+
+.nhspk-img-guide + %nhsuk-heading-m,
+pre + %nhsuk-heading-m,
+.nhspk-img-guide + %nhsuk-heading-s,
+pre + %nhsuk-heading-s {
+  padding-top: nhsuk-spacing(1);
+
+  @include mq($from: tablet) {
+    padding-top: nhsuk-spacing(2);
+  }
+}

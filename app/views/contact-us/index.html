@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  NHS.UK - Contact us
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/home-page",
+      text: "Home"
+    },
+    {
+      href: "/contact-us",
+      text: "Contact us" 
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-three-quarters">
+      <h1>Contact us</h1>
+    </div>
+  </div>  
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-three-quarters nhsuk-!-margin-bottom-8">
+      <p>To help guide you to the most appropriate form or the best possible support information, we would first like to ask you a few questions.</p>
+      <p>This should only take a couple of minutes of your time.</p>
+      <a href="/contact-us/level-1" class="nhsuk-button btn nhsuk-!-margin-bottom-8">Start now</a>
+      <h2 class="nhsuk-heading-m">How we handle your personal information</h2>
+      <p>We will only ask for your name and email address. We will only use the name you provide in any replies to your message. We will only use your email address to reply and invite you to complete a voluntary short satisfaction survey.</p>
+      <p>We do not store the above details for any other reason.</p>
+    </div>
+
+
+    <div class="nhsuk-grid-column-one-quarter">
+    </div>
+
+  </div>
+{% endblock %}
