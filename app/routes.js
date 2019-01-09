@@ -19,8 +19,18 @@ router.post('/reasonforcontact-answer', function (req, res) {
 
   if (reason === 'healthcare-data-query') {
     res.redirect('/level-2-healthcare')
-  } else {
-    res.redirect('/fb')
+  } 
+  else if (reason == "feedback"){
+    res.redirect('/level-2-feedback')
+  }
+  else if (reason == "feedback"){
+    res.redirect('/level-2-complaint')
+  }
+  else if (reason == "feedback"){
+    res.redirect('/level-2-pims')
+  }
+  else {
+    res.redirect('/')
   }
 });
 
