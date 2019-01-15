@@ -8,15 +8,17 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-three-quarters">
 
+    {{reason}}
+
     <form action="/reasonforcontact-answer" method="post">
 
         {% call fieldset({
-          legend: {
-            text: "I have a query about my healthcare or data",
+            legend: {
+            text: "I want to give feedback on the NHS App",
             classes: "nhsuk-fieldset__legend--l",
             isPageHeading: true
-          }
-        }) %}
+            }
+          }) %}
 
         {{ hint({
           "text": "Please choose one of the following options"
@@ -27,16 +29,12 @@
           "name": "reasonforcontact",
           "items": [
             {
-              "value": "medical-records",
-              "text": "I would like to access my own or another persons medical records"
+              "value": "problem",
+              "text": "I would like to report a problem"
             },
             {
-              "value": "request-nhs-number",
-              "text": "I would like to request my NHS number"
-            },
-            {
-              "value": "personal-medical-enquiry",
-              "text": "I have a personal medical enquiry"
+              "value": "improvement",
+              "text": "I would like to suggest an improvement"
             }
           ]
         }) }}
@@ -51,7 +49,7 @@
       </form>
 
       {{ backLink({
-      "href": "/contact-us/level-1",
+      "href": "/contact-us/level-2-feedback",
       "text": "Change my previous answer"
       }) }}
 

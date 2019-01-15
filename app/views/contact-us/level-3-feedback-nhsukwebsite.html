@@ -12,14 +12,14 @@
 
         {% call fieldset({
           legend: {
-            text: "I have a query about my healthcare or data",
+            text: "I want to give feedback on the NHS.UK website",
             classes: "nhsuk-fieldset__legend--l",
             isPageHeading: true
           }
         }) %}
 
         {{ hint({
-          "text": "Please choose one of the following options"
+          "text": "Would you like to give feedback on the NHS Apps Library?"
         }) }}
 
         {{ radios({
@@ -27,16 +27,12 @@
           "name": "reasonforcontact",
           "items": [
             {
-              "value": "medical-records",
-              "text": "I would like to access my own or another persons medical records"
+              "value": "yes-nhsuk-website",
+              "text": "Yes"
             },
             {
-              "value": "request-nhs-number",
-              "text": "I would like to request my NHS number"
-            },
-            {
-              "value": "personal-medical-enquiry",
-              "text": "I have a personal medical enquiry"
+              "value": "no-nhsuk-website",
+              "text": "No"
             }
           ]
         }) }}
@@ -51,7 +47,7 @@
       </form>
 
       {{ backLink({
-      "href": "/contact-us/level-1",
+      "href": "/contact-us/level-2-feedback",
       "text": "Change my previous answer"
       }) }}
 
