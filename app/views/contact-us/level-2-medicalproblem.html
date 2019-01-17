@@ -1,0 +1,41 @@
+{% extends 'layout-transactional.html' %}
+
+{% block pageTitle %}
+  Contact us
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-three-quarters">
+
+        <h2>The NHS.UK team cannot help with medical problems</h2>
+        
+        {{ careCard({
+          "type": "immediate",
+          "heading": "Call 999 if:",
+          "HTML": "
+          <p>You require emergency medical attention or attend your local accident and emergency department if you are able to do so.</p>
+          "
+        }) }}
+  
+        {{ careCard({
+          "type": "non-urgent",
+          "heading": "For a non-emergency you can:",
+          "HTML": "
+          <ul>
+            <li><a href=\"tel:111\">call 111</a> or go to <a href=\"https://111.nhs.uk\">111 online</a></li>
+            <li>speak to a <a href=\"https://www.nhs.uk/service-search\">pharmacist, GP or dentist</a></li>
+            <li>search the <a href=\"https://www.nhs.uk/conditions\"> NHS website health A-Z</a> for more advice about your condition</li>
+          </ul>
+          "
+        }) }}
+
+      {{ backLink({
+      "href": "/contact-us/level-1",
+      "text": "Change my previous answer"
+      }) }}
+
+    </div>
+  </div>
+
+{% endblock %}

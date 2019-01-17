@@ -19,9 +19,12 @@ router.get('/', function(req , res){
 router.post('/reasonforcontact-answer', function (req, res) {
   let reason = req.body.reasonforcontact;
 
-  if (reason === 'healthcare-data-query') {
-    res.redirect('/contact-us/level-2-healthcare')
+  if (reason === 'medical-problem') {
+    res.redirect('/contact-us/level-2-medicalproblem')
   } 
+  else if (reason == "healthcare-data-query"){
+    res.redirect('/contact-us/level-2-healthcare')
+  }
   else if (reason == "feedback"){
     res.redirect('/contact-us/level-2-feedback')
   }
@@ -53,15 +56,40 @@ router.post('/reasonforcontact-answer', function (req, res) {
   else if (reason == "nhs-service"){
     res.redirect('/contact-us/level-3-feedback-nhsukwebsite2')
   }
+  //---
+  else if (reason == "no-nhsappslibrary"){
+    res.redirect('/contact-us/level-3-feedback-nhsukwebsite2')
+  }
+  else if (reason == "no-specificapp"){
+    res.redirect('/contact-us/level-3-feedback-nhsukwebsite2')
+  }
+
+  // To Level 4 - Apps Library
+  else if (reason == "nhsappslibrary"){
+    res.redirect('/contact-us/level-4-feedback-nhsappslibrary')
+  }
+ 
+  // To Level 4 - Feedback Form
+  else if (reason == "problem"){
+    res.redirect('/contact-us/level-4-feedback-form')
+  }
+  else if (reason == "improvement"){
+    res.redirect('/contact-us/level-4-feedback-form')
+  }
+
+ // To Level 5 - Apps Library - Specific App
+  else if (reason == "specificapp"){
+    res.redirect('/contact-us/level-5-feedback-nhsappslibrary-specificapp')
+  }
 
   else {
     res.redirect('/')
   }
 });
 
-router.get('/contact-us/level-3-feedback-nhsukwebsite2', function (req, res) {
-    var reason = req.reason;
-});
+//router.get('/contact-us/level-3-feedback-nhsukwebsite2', function (req, res) {
+//    var reason = req.reason;
+//});
 
 module.exports = router;
 
