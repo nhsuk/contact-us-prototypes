@@ -8,31 +8,52 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-three-quarters">
 
-        <h2>The NHS.UK team cannot help with medical problems</h2>
-        
-        {{ careCard({
-          "type": "immediate",
-          "heading": "Call 999 if:",
-          "HTML": "
-          <p>You require emergency medical attention or attend your local accident and emergency department if you are able to do so.</p>
-          "
-        }) }}
-  
-        {{ careCard({
-          "type": "non-urgent",
-          "heading": "For a non-emergency you can:",
-          "HTML": "
-          <ul>
-            <li><a href=\"tel:111\">call 111</a> or go to <a href=\"https://111.nhs.uk\">111 online</a></li>
-            <li>speak to a <a href=\"https://www.nhs.uk/service-search\">pharmacist, GP or dentist</a></li>
-            <li>search the <a href=\"https://www.nhs.uk/conditions\"> NHS website health A-Z</a> for more advice about your condition</li>
-          </ul>
-          "
-        }) }}
+      {{ backLink({
+      "href": "/contact-us/level-1",
+      "text": "What is the reason for contacting us?"
+      }) }}
+
+      <h2>I have a medcial problem</h2>
+      <p>The NHS Service Desk team can’t provide personal medical advice or comment on individual clinical cases.</p>
+
+      {{ careCard({
+        "type": "immediate",
+        "heading": "Call 999 if:",
+        "HTML": "
+        <p>You require emergency medical attention or attend your local accident and emergency department if you are able to do so.</p>
+        "
+      }) }}
+      <p><a href="https://www.nhs.uk/Service-Search/Accident-and-emergency-services/LocationSearch/428">Find your local A&E</a></p>
+
+      {{ careCard({
+        "type": "non-urgent",
+        "heading": "For a non-emergency you can:",
+        "HTML": "
+        <ul>
+          <li>visit the <a href=\"https://www.nhs.uk/conditions\">NHS website Health A-Z</a> for more information on medical conditions.</li>
+          <li>speak to a pharmacist for advice about medicines or common problems like coughs, colds and rashes.</li>
+          <li>make an appointment to see your GP or dentist, if you think the problem can wait. <a href=\"https://www.nhs.uk/Service-Search/GP/LocationSearch/4\">Find your nearest GP</a> or <a href=\"https://www.nhs.uk/Service-Search/Dentists/LocationSearch/3\">Find your nearest Dentist</a></li>
+        </ul>
+        "
+      }) }}
+
+      <p>If you need help now and can’t see a GP or dentist, go to <a href="https://111.nhs.uk/">111.nhs.uk</a> or call 111 to find out what to do.</p>
+      
+      <h2 class="nhsuk-heading-m">What you can contact the Service Desk about</h2>
+      <p>You can contact the NHS website Service Desk with queries about the NHS website.</p>
+      <p>You can:</p>
+      <ul>
+        <li>ask a question</li>
+        <li>report a problem</li>
+        <li>suggest an improvement</li>
+        <li>make a complaint</li>
+      </ul>
+      <h2 class="nhsuk-heading-m">If this isn’t what you were looking for</h2>
+      <p>Go back to the start screen to contact the Service Desk about the NHS website or find out about another issue.</p>
 
       {{ backLink({
       "href": "/contact-us/level-1",
-      "text": "Change my previous answer"
+      "text": "Back"
       }) }}
 
     </div>

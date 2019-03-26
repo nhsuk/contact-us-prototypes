@@ -8,45 +8,20 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-three-quarters">
 
-    <form action="/reasonforcontact-answer" method="post">
+      {{ backLink({
+      "href": "/contact-us/level-3-feedback-nhsapp",
+      "text": "I want to give feedback on the NHS App"
+      }) }}
+
+      <form action="/reasonforcontact-answer" method="post">
 
         {% call fieldset({
           legend: {
-            text: "I would like to report a problem / suggest an improvement with... ",
+            text: "I would like to report a problem / suggest an improvement with the NHS App",
             classes: "nhsuk-fieldset__legend--l",
             isPageHeading: true
           }
         }) %}
-
-        {{ label({
-          "text": "What's it to do with?"
-        }) }}
-
-        {{ radios({
-          "idPrefix": "",
-          "name": "",
-          "hint": {
-          "text": "Will only be displayed if NHS.UK website has been chosen"
-          },
-          "items": [
-            {
-              "value": "wholesite",
-              "text": "The whole site"
-            },
-            {
-              "value": "specificpage",
-              "text": "A specific page"
-            }
-          ]
-        }) }}
-
-        {{ input({
-          "label": {
-          "text": "URL"
-          },
-          "id": "url",
-          "name": "url"
-        }) }}
 
         {{ textarea({
           "name": "details",
@@ -62,6 +37,9 @@
         {{ input({
           "label": {
           "text": "Name"
+          },
+          "hint": {
+          "text": "We'll only use this to reply to your message."
           },
           "id": "name",
           "name": "name"
@@ -90,8 +68,8 @@
       </form>
 
       {{ backLink({
-      "href": "/contact-us/level-3-feedback-nhsukwebsite2",
-      "text": "Change my previous answer"
+      "href": "/contact-us/level-3-feedback-nhsapp",
+      "text": "Back"
       }) }}
 
     </div>

@@ -1,0 +1,78 @@
+{% extends 'layout-transactional.html' %}
+
+{% block pageTitle %}
+  Contact us
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-three-quarters">
+
+      {{ backLink({
+      "href": "/contact-us/level-3-feedback-nhsservice",
+      "text": "I want to give feedback on an NHS Service"
+      }) }}
+
+      <form action="/reasonforcontact-answer" method="post">
+
+        {% call fieldset({
+          legend: {
+            text: "I would like to report a problem / suggest an improvement with an NHS Service",
+            classes: "nhsuk-fieldset__legend--l",
+            isPageHeading: true
+          }
+        }) %}
+
+        {{ textarea({
+          "name": "details",
+          "id": "details",
+          "label": {
+          "text": "What are the details?"
+          },
+          "hint": {
+            "text": "Don't include personal or financial information, eg your National Insurance number or credit card details."
+          }
+        }) }}
+
+        {{ input({
+          "label": {
+          "text": "Name"
+          },
+          "hint": {
+          "text": "We'll only use this to reply to your message."
+          },
+          "id": "name",
+          "name": "name"
+        }) }}
+                  
+        {{ input({
+          "label": {
+          "text": "Email"
+          },
+          "hint": {
+          "text": "We'll only use this to reply to your message."
+          },
+          "id": "email",
+          "name": "email"
+        }) }}
+
+
+
+        {% endcall %}
+
+        {{ button({
+          "text": "Send message",
+          "id": "btn_submit"
+        }) }}
+
+      </form>
+
+      {{ backLink({
+      "href": "/contact-us/level-3-feedback-nhsservice",
+      "text": "Back"
+      }) }}
+
+    </div>
+  </div>
+
+{% endblock %}

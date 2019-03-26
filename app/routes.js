@@ -42,48 +42,71 @@ router.post('/reasonforcontact-answer', function (req, res) {
   else if (reason == "request-nhs-number"){
     res.redirect('/contact-us/level-3-healthcare-nhsnumber')
   }
-  else if (reason == "personal-medical-enquiry"){
-    res.redirect('/contact-us/level-3-healthcare-medicalenquiry')
-  }
 
  // To Level 3 - Feedback
   else if (reason == "nhsuk-website"){
     res.redirect('/contact-us/level-3-feedback-nhsukwebsite')
   }
   else if (reason == "nhs-app"){
-    res.redirect('/contact-us/level-3-feedback-nhsukwebsite2?reason=nhs-app')
+    res.redirect('/contact-us/level-3-feedback-nhsapp')
+  }
+  else if (reason == "nhs-appslibrary"){
+    res.redirect('/contact-us/level-3-feedback-nhsappslibrary')
   }
   else if (reason == "nhs-service"){
-    res.redirect('/contact-us/level-3-feedback-nhsukwebsite2')
-  }
-  //---
-  else if (reason == "no-nhsappslibrary"){
-    res.redirect('/contact-us/level-3-feedback-nhsukwebsite2')
-  }
-  else if (reason == "no-specificapp"){
-    res.redirect('/contact-us/level-3-feedback-nhsukwebsite2')
+    res.redirect('/contact-us/level-3-feedback-nhsservice')
   }
 
-  // To Level 4 - Apps Library
-  else if (reason == "nhsappslibrary"){
-    res.redirect('/contact-us/level-4-feedback-nhsappslibrary')
+  // To Level 3 - Complaint
+  else if (reason == "complaint-nhswebsite"){
+    res.redirect('/contact-us/level-3-complaint-feedback-form-nhswebsite')
+  }
+  else if (reason == "complaint-nhsservice"){
+    res.redirect('/contact-us/level-3-complaint-nhsservice')
+  }
+
+  // To Level 4 - Feedback Form NHS Website
+  else if (reason == "problem-nhswebsite"){
+    res.redirect('/contact-us/level-4-feedback-form-nhswebsite')
+  }
+  else if (reason == "improvement-nhswebsite"){
+    res.redirect('/contact-us/level-4-feedback-form-nhswebsite')
+  }
+
+  // To Level 4 - Feedback Form NHS App
+  else if (reason == "problem-nhsapp"){
+    res.redirect('/contact-us/level-4-feedback-form-nhsapp')
+  }
+  else if (reason == "improvement-nhsapp"){
+    res.redirect('/contact-us/level-4-feedback-form-nhsapp')
+  }
+
+  // To Level 4 - Apps Library - Specific App
+  else if (reason == "specificapp"){
+  res.redirect('/contact-us/level-4-feedback-nhsappslibrary-specificapp')
+  }
+  // To Level 4 - Apps Library - Specific App
+  else if (reason == "no-specificapp"){
+  res.redirect('/contact-us/level-4-feedback-nhsappslibrary')
+  }
+  // To Level 4 - Feedback Form NHS Apps Library
+  else if (reason == "problem-nhsappslibrary"){
+    res.redirect('/contact-us/level-5-feedback-form-nhsappslibrary')
+  }
+  else if (reason == "improvement-nhsappslibrary"){
+    res.redirect('/contact-us/level-5-feedback-form-nhsappslibrary')
   }
  
-  // To Level 4 - Feedback Form
-  else if (reason == "problem"){
-    res.redirect('/contact-us/level-4-feedback-form')
+  // To Level 4 - Feedback Form NHS Service
+  else if (reason == "problem-nhsservice"){
+    res.redirect('/contact-us/level-4-feedback-form-nhsservice')
   }
-  else if (reason == "improvement"){
-    res.redirect('/contact-us/level-4-feedback-form')
-  }
-
- // To Level 5 - Apps Library - Specific App
-  else if (reason == "specificapp"){
-    res.redirect('/contact-us/level-5-feedback-nhsappslibrary-specificapp')
+  else if (reason == "improvement-nhsservice"){
+    res.redirect('/contact-us/level-4-feedback-form-nhsservice')
   }
 
   else {
-    res.redirect('/')
+    res.redirect('/contact-us/')
   }
 });
 
