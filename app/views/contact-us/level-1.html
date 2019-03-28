@@ -8,6 +8,11 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-three-quarters">
 
+    {{ backLink({
+    "href": "/contact-us/",
+    "text": "Contact us start"
+    }) }}
+
     <form action="/reasonforcontact-answer" method="post">
 
         {% call fieldset({
@@ -32,7 +37,7 @@
             },
             {
               "value": "healthcare-data-query",
-              "text": "I have a query about my healthcare or data"
+              "text": "I have a query about my medical records or NHS information"
             },
             {
               "value": "feedback",
@@ -57,6 +62,19 @@
         }) }}
 
       </form>
+
+
+        {{ details({
+          "classes": "nhsuk-expander",
+          "text": "Other options",
+          "HTML": "
+          <p><a href=\"https://digital.nhs.uk/news-and-events/press-office\">Make a press enquiry</a> (journalists only)</p>
+          <p><a href=\"https://www.nhs.uk/contact-us/freedom-of-information-foi-requests/\">Make a Freedom of Information (FOI) request</a></p>
+          <p><a href=\"https://www.nhs.uk/using-the-nhs/healthcare-abroad/apply-for-a-free-ehic-european-health-insurance-card/\">Apply for a free EHIC (European Health Insurance Card)</a<</p>
+          <p>C-RS Appointments</p>
+          "
+        }) }}
+
 
       {{ backLink({
       "href": "/contact-us/",

@@ -8,11 +8,16 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-three-quarters">
 
+    {{ backLink({
+    "href": "/contact-us/level-1",
+    "text": "What is the reason for contacting us?"
+    }) }}
+
     <form action="/reasonforcontact-answer" method="post">
 
         {% call fieldset({
           legend: {
-            text: "I have a query about my healthcare or data",
+            text: "I have a query about my medical records or NHS information",
             classes: "nhsuk-fieldset__legend--l",
             isPageHeading: true
           }
@@ -33,10 +38,6 @@
             {
               "value": "request-nhs-number",
               "text": "I would like to request my NHS number"
-            },
-            {
-              "value": "personal-medical-enquiry",
-              "text": "I have a personal medical enquiry"
             }
           ]
         }) }}
@@ -52,7 +53,7 @@
 
       {{ backLink({
       "href": "/contact-us/level-1",
-      "text": "Change my previous answer"
+      "text": "Back"
       }) }}
 
     </div>

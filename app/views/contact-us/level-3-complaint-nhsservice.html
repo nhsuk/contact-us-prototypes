@@ -1,0 +1,52 @@
+{% extends 'layout-transactional.html' %}
+
+{% block pageTitle %}
+  Contact us
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-three-quarters">
+
+      {{ backLink({
+      "href": "/contact-us/level-2-complaint",
+      "text": "I want to make a complaint"
+      }) }}
+
+      <h1 class="nhsuk-heading-l">I would like to complain about an NHS service</h1>
+      <p>The NHS website team can help with questions and feedback about the website. But you can’t give feedback or make a complaint about an NHS service by contacting the NHS website.</p>
+      <h2 class="nhsuk-heading-m">If you want to give feedback about an NHS service</h2>
+      <p>You can give feedback on health and social care services in England by - </p>
+      <ul>
+        <li>using the <a href="/service-search">service finder</a> to find the place you visited eg, GP practice, hospital and leaving a star rating or review on their profile</li>
+      </ul>
+      <p>You may also be invited to:</p>
+      <ul>
+        <li>fill in the <a href="/using-the-nhs/about-the-nhs/friends-and-family-test-fft/">Friends and Family Test (FFT)</a> when you complete your treatment or are discharged from a service - if you are not given a form automatically you can ask for one at reception.</li>
+        <li>fill in a <a href="https://www.england.nhs.uk/statistics/statistical-work-areas/proms/">Patient Reported Outcomes Measures questionnaire</a> - you may be given this form if you’ve recently had a hip or knee replacement, varicose vein surgery or groin hernia surgery.</li>
+      </ul>
+      <p>Find out more about <a href="/using-the-nhs/about-the-nhs/friends-and-family-test-fft/">ways to give feedback</a></p>
+      <h2 class="nhsuk-heading-m">If you want to make a complaint about an NHS service</h2>
+      <p>When making a complaint about an NHS service you can complain to either:</p>
+      <ul>
+        <li>the healthcare provider - this is the NHS organisation where you received the NHS service, for example, your GP practice, hospital, dentists or opticians</li>
+        <li>the commissioner - this is the organisation that pays for the service or care you received, for example NHS England, your local clinical commissioning group (CCG)</li>
+      </ul>
+      <p>You have to make the complaint within 12 months of an incident.</p>
+      <p>You may find it helpful to speak to the Patient Advice and Liaison (PALS) service. You can <a href="/Service-Search/Patient-advice-and-liaison-services-(PALS)/LocationSearch/363">find a PALS service</a> in most hospitals.</p>
+      <p>If you are not happy with the way your complaint has been handled you can <a href="http://www.ombudsman.org.uk/make-a-complaint">contact the Parliamentary and Health Service Ombudsman</a></p>
+      <h2 class="nhsuk-heading-m">For more information</h2>
+      <p>Visit NHS England for <a href="https://www.england.nhs.uk/contact-us/complaint/">more information on how to make a complaint</a></p>
+      <p>Or read more on the NHS website about <a href="/using-the-nhs/about-the-nhs/how-to-complain-to-the-nhs/">how to give feedback or make a complaint about an NHS service</a></p>
+      <h2 class="nhsuk-heading-m">If this isn’t what you were looking for</h2>
+      <p>Go back to the start screen to contact the Service Desk about the NHS website or find out about another issue.</p>
+      
+      {{ backLink({
+      "href": "/contact-us/level-2-complaint",
+      "text": "Back"
+      }) }}
+
+    </div>
+  </div>
+
+{% endblock %}
